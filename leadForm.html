@@ -1,0 +1,139 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"></META>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100;0,8..30,400;1,8..30,100&display=swap');
+    /* General attributes for everything in the form */
+    .sfdc-form * {
+        font-family: 'Piazzolla', serif;
+    }
+    /* Setting the background color of the form (not the inputs)*/
+    .sfdc-form form {
+        font-size: 15px;
+    }
+    /* Submit button styling */
+    .sfdc-form input[type=submit] {
+        background-color: #004bf9;
+        border: solid 1px #004bf9;
+        border-radius: 15px; 
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+        color: white;
+        margin: 15px auto 0 auto;
+    }
+    /* Submit button styling when hovering the cursor on top of it */
+    .sfdc-form input[type=submit]:hover {
+        background-color: #7fa3fb;
+        border: none;
+        color: black;
+    }
+    .sfdc-form{
+        padding: 35px;
+/*        border: solid 5px green;*/
+    }
+    /* Full-width input fields */
+    input[type=text], textarea,select{
+      width: 100%;
+      padding: 6px;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+      margin-top: 3px;
+      margin-bottom: 5px;
+      font-size: 15px;
+      color: black;
+    }
+
+    input[type=text]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    input[type=textarea]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+/*      background-color: black;*/
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    span{
+        color:red;
+    }
+    label, input{
+        display: block;
+    }
+    form{
+        max-width: 500px;
+        min-width: 300px;
+        margin: 0 auto;
+        padding: 15px;
+        border: solid 3px #c2cbc2;
+    }
+
+
+</style>
+<div class="sfdc-form">
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D8M0000000N52" method="POST">
+
+        <input type=hidden name="oid" value="00D8M0000000N52">
+        <input type=hidden name="retURL" value="https://www.beamsuntory.com/en/">
+
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail"                                  -->
+        <!--  value="jaiveer.jha@beamsuntory.com">                                    -->
+        <!--  ----------------------------------------------------------------------  -->
+
+        <input type=hidden id="lead_source" name="lead_source" value="Web - Salesforce">
+
+        <label for="first_name"><b>First Name <span>*</span></b></label>
+        <input  id="first_name" name="first_name" type="text" placeholder="Enter First Name" required />
+
+        <label for="last_name"><b>Last Name <span>*</span></b></label>
+        <input  id="last_name" name="last_name" type="text" placeholder="Enter Last Name" required />
+
+        <label for="email"><b>Email <span>*</span></b></label>
+        <input  id="email" name="email" type="text" placeholder="Enter Email" required />
+
+        <label><b>Telephone <span>*</span></b></label>
+        <input  id="00NVB000000IXVN" name="00NVB000000IXVN" size="20" type="text" placeholder="Enter Telephone" required />
+
+        <label><b>Nationality</b></label>
+        <select  id="00NVB000000IXoj" name="00NVB000000IXoj" title="Nationality">
+        <option value="">--None--</option>
+        <option value="Spaniards">Spaniards</option>
+        <option value="American">American</option>
+        <option value="Indian">Indian</option>
+        </select>
+
+        <label><b>Location</b></label>
+        <select  id="00NVB000000IXqL" name="00NVB000000IXqL" title="Location">
+        <option value="">--None--</option>
+        <option value="Spain">Spain</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        </select>
+
+        <label><b>Occupation</b></label>
+        <textarea  id="00NVB000000IXrx" name="00NVB000000IXrx" type="text" rows="1" placeholder="Enter Occupation"></textarea>
+
+        <label for="description"><b>Your Message</b></label>
+        <textarea id="description"  rows="3" name="description" placeholder="Enter Your Comments"></textarea>
+
+        <p>By submitting this form you agree to our <a href="#">Terms & Privacy</a>.</p>
+        <input type="submit" name="submit">
+    </form>
+</div>
